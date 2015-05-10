@@ -1,0 +1,16 @@
+* "simulator" "HSPICE" 
+* "version" "U-2003.09-SP1   "
+* "format" "HSP"
+* "rundate" "22:47:05  06/17/2009"
+* "netlist" "d:\hspice simulation\homework 7\hw.sp "
+* "runtitle" " inverter                                                        "
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ vdd =   5.0000        
++ vin =   0.            
++ vout =   5.0000        
+***   END: Saved Operating Point ***                     

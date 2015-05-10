@@ -1,0 +1,13 @@
+pnlAddPane();
+nil
+1
+designOpen("d:\\hspice simulation\\homework 9\\hw.sp");
+"D0"
+t
+pnlAddCurve(1, node(D0,"A0","i(r4)"), node(D0,"A0","TIME"));
+nil
+quit();
+exit
+pnlDeletePane(1, 1);
+nil
+nil

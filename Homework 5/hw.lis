@@ -1,0 +1,164 @@
+ Init: read install configuration file: C:\synopsys\Hspice2003.09-SP1\meta.cfg
+ ******  HSP_MT -- U-2003.09-SP1 (20031115) 10:34:05  06/30/2009  pcnt         
+  Copyright (C) 2003 Synopsys, Inc. All Rights Reserved.                       
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the 
+  terms and conditions of the license agreement found in:
+    C:\synopsys\Hspice2003.09-SP1\license.txt
+  Use of this program is your acceptance to be bound by this 
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: d:\hspice simulation\homework 5\hw.sp                             
+  lic: MT Count(4) > 2, require one extra license token 
+  lic:  
+  lic: FLEXlm: v6.1g 
+  lic: USER:   Administrator        HOSTNAME: user-ccbe605d75 
+  lic: HOSTID: 080027007457         PID:      3544 
+  lic: Using FLEXlm license file: 
+  lic: C:\synopsys\Hspice2003.09-SP1\license.dat 
+  lic: Checkout hspicewin;  Encryption code: ACFE052FD4EC9BCF5077 
+  lic: Notice: NOT TO BE SOLD 
+  lic: License/Maintenance for hspicewin will expire on 31-dec-2020/2003.3000 
+  lic: NODE LOCKED DEMO license on host 080027007457 
+  lic:   
+ Init: read install configuration file: C:\synopsys\Hspice2003.09-SP1\meta.cfg
+ Init: hspice initialization file: C:\synopsys\Hspice2003.09-SP1\hspice.ini
+ * hspice.ini
+ .option post = 2
+ .global gnd! + vdd!
+ ** warning **: model esd              does not contain a character period (.), it is not automatic model selector, the parameters lmin, lmax, wmin and wmax are useless and ignored.
+ .op
+ .optionms post
+
+ **error**  unrecognizable command card
+
+ .tran 1n 500u
+ v1 vdd! 0 5
+ v2 gnd! 0 0
+ r1 vdd! a 1k
+ m1 a a gnd! gnd! nch w=20u l=0.5u
+ m2 b a gnd! gnd! nch w=100u l=0.5u
+ r2 vdd! b 1k
+ .probe i(m1) i(m2) i(r1) i(r2)
+ .end
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+ **warning** both nodes of source     0:v2              
+             are connected together
+
+ **warning**: circuit size too SMALL to benefit from multithreading, thread count AUTO RESET to 1 
+1 ******  HSP_MT -- U-2003.09-SP1 (20031115) 10:34:05  06/30/2009  pcnt         
+ ******  
+  currentmirror1                                                               
+  ******  operating point information      tnom=  25.000 temp=  25.000         
+ ******  
+ ***** operating point status is all       simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:a       =   1.7814  0:b       = 157.5103m 0:vdd!    =   5.0000 
+
+
+ ****  voltage sources
+
+ subckt             
+ element  0:v1      
+  volts      5.0000 
+  current   -8.0610m
+  power     40.3052m
+
+
+     total voltage source power dissipation=   40.3052m       watts
+
+ **** resistors
+
+ subckt                        
+ element  0:r1       0:r2      
+  r value    1.0000k    1.0000k
+  v drop     3.2186     4.8425 
+  current    3.2186m    4.8425m
+  power     10.3591m   23.4497m
+
+
+
+ **** mosfets
+
+
+ subckt                        
+ element  0:m1       0:m2      
+ model    0:nch.12   0:nch.12  
+ region     Saturati     Linear
+  id         3.2186m    4.8425m
+  ibs       -4.2776f   -6.6748f
+  ibd      -24.5867p -121.2978f
+  vgs        1.7814     1.7814 
+  vds        1.7814   157.5103m
+  vbs        0.         0.     
+  vth      568.0848m  573.1548m
+  vdsat    765.6048m  776.2195m
+  beta       8.1290m   39.7270m
+  gam eff  532.3329m  507.0387m
+  gm         3.7468m    2.9677m
+  gds       79.8178u   27.9459m
+  gmb      967.0812u  954.8471u
+  cdtot     21.6644f  302.5701f
+  cgtot     38.1959f  248.4013f
+  cstot     63.6100f  327.3823f
+  cbtot     52.1265f  284.2812f
+  cgs       31.2006f  129.6425f
+  cgd        4.1404f  118.5088f
+
+
+
+  Opening plot unit= 79
+ file=d:\hspice simulation\homework 5\hw.tr0                                   
+
+
+          ***** job concluded
+1 ******  HSP_MT -- U-2003.09-SP1 (20031115) 10:34:05  06/30/2009  pcnt         
+ ******  
+  currentmirror1                                                               
+  ******  job statistics summary           tnom=  25.000 temp=  25.000         
+ ******  
+
+           total memory used        468 kbytes
+
+  # nodes =    12 # elements=     9
+  # diodes=     0 # bjts    =     0 # jfets   =     0 # mosfets =     2
+
+     analysis      time      # points  tot. iter  conv.iter
+
+     op point          0.00         1         7
+     transient         2.94    500001    200006    100003 rev=     0
+     readin            0.14
+     errchk            0.03
+     setup             0.00
+     output            0.00
+           total cpu time          3.14 seconds
+               job started at  10:34:05  06/30/2009
+               job ended   at  10:34:08  06/30/2009
+
+
+  lic: Release hspicewin token(s) 

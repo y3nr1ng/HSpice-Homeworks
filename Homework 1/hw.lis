@@ -1,0 +1,114 @@
+ Init: read install configuration file: C:\synopsys\Hspice2003.09-SP1\meta.cfg
+ ******  HSPICE -- U-2003.09-SP1 (20031115) 22:30:15  05/12/2009  pcnt         
+  Copyright (C) 2003 Synopsys, Inc. All Rights Reserved.                       
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the 
+  terms and conditions of the license agreement found in:
+    C:\synopsys\Hspice2003.09-SP1\license.txt
+  Use of this program is your acceptance to be bound by this 
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: d:\hspice simulation\homework 1\hw.sp                             
+  lic:  
+  lic: FLEXlm: v6.1g 
+  lic: USER:   Administrator        HOSTNAME: user-ccbe605d75 
+  lic: HOSTID: 0                    PID:      2600 
+  lic: Using FLEXlm license file: 
+  lic: C:\synopsys\Hspice2003.09-SP1\license.dat 
+  lic: Checkout hspicewin;  Encryption code: ACFE052FD4EC9BCF5077 
+  lic: Notice: NOT TO BE SOLD 
+  lic: License/Maintenance for hspicewin will expire on 31-dec-2020/2003.3000 
+  lic: NODE LOCKED DEMO license on host 0 
+  lic:   
+ Init: read install configuration file: C:\synopsys\Hspice2003.09-SP1\meta.cfg
+ Init: hspice initialization file: C:\synopsys\Hspice2003.09-SP1\hspice.ini
+ * hspice.ini
+ .option post = 2
+ .global gnd
+ + vdd
+  
+ .op
+ .optionms post
+
+ **error**  unrecognizable command card
+
+ .tran 1 50
+  
+ r1 vdd a 12
+ r2 a c 12
+ r3 c e 3
+ r4 a gnd 16
+ r5 c gnd 6
+ r6 e gnd 9
+  
+ v1 vdd 0 80
+ v2 gnd 0 0
+  
+ .probe i(r2) i(r3) v(a) v(c) v(e)
+ * .plot v(e)
+ .end
+
+ **warning** both nodes of source     0:v2              
+             are connected together
+
+1 ******  HSPICE -- U-2003.09-SP1 (20031115) 22:30:15  05/12/2009  pcnt         
+ ******  
+  homework                                                                     
+  ******  operating point information      tnom=  25.000 temp=  25.000         
+ ******  
+ ***** operating point status is all       simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:a       =  32.0000  0:c       =   8.0000  0:e       =   6.0000 
+ +0:vdd     =  80.0000 
+
+
+ ****  voltage sources
+
+ subckt             
+ element  0:v1      
+  volts     80.0000 
+  current   -4.0000 
+  power    320.0000 
+
+
+     total voltage source power dissipation=  320.0000        watts
+
+ **** resistors
+
+ subckt                                                                    
+ element  0:r1       0:r2       0:r3       0:r4       0:r5       0:r6      
+  r value   12.0000    12.0000     3.0000    16.0000     6.0000     9.0000 
+  v drop    48.0000    24.0000     2.0000    32.0000     8.0000     6.0000 
+  current    4.0000     2.0000   666.6667m    2.0000     1.3333   666.6667m
+  power    192.0000    48.0000     1.3333    64.0000    10.6667     4.0000 
+
+  Opening plot unit= 79
+ file=d:\hspice simulation\homework 1\hw.tr0                                   
+
+
+          ***** job concluded
+1 ******  HSPICE -- U-2003.09-SP1 (20031115) 22:30:15  05/12/2009  pcnt         
+ ******  
+  homework                                                                     
+  ******  job statistics summary           tnom=  25.000 temp=  25.000         
+ ******  
+
+           total memory used        154 kbytes
+
+  # nodes =     7 # elements=     9
+  # diodes=     0 # bjts    =     0 # jfets   =     0 # mosfets =     0
+
+     analysis      time      # points  tot. iter  conv.iter
+
+     op point          0.00         1         4
+     transient         0.03        51        26        13 rev=     0
+     readin            0.00
+     errchk            0.00
+     setup             0.00
+     output            0.00
+           total cpu time          0.05 seconds
+               job started at  22:30:15  05/12/2009
+               job ended   at  22:30:15  05/12/2009
+
+
+  lic: Release hspicewin token(s) 

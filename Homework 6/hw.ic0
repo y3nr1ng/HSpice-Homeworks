@@ -1,0 +1,18 @@
+* "simulator" "HSPICE" 
+* "version" "U-2003.09-SP1   "
+* "format" "HSP"
+* "rundate" "22:09:03  07/01/2009"
+* "netlist" "d:\hspice simulation\homework 6\hw.sp "
+* "runtitle" " current_mirror_2                                                "
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ a =   2.9327        
++ b = 305.9736m       
++ c =   1.4664        
++ d = 201.1666m       
++ vdd =   5.0000        
+***   END: Saved Operating Point ***                     

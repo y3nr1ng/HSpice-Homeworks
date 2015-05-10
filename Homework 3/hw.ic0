@@ -1,0 +1,19 @@
+* "simulator" "HSPICE" 
+* "version" "U-2003.09-SP1   "
+* "format" "HSP"
+* "rundate" "22:06:15  06/01/2009"
+* "netlist" "d:\hspice simulation\homework 3\hw.sp "
+* "runtitle" " homework                                                        "
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ pulse1 =   0.            
++ pulse2 =   0.            
++ swin1 =   4.0000        
++ swout1 =  63.2139m       
++ swout2 =  10.3024n       
++ vdd =   4.0000        
+***   END: Saved Operating Point ***                     

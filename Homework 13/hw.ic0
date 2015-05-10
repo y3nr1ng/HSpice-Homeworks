@@ -1,0 +1,15 @@
+* "simulator" "HSPICE" 
+* "version" "U-2003.09-SP1   "
+* "format" "HSP"
+* "rundate" "19:40:34  07/14/2009"
+* "netlist" "d:\hspice simulation\homework 13\hw.sp "
+* "runtitle" " band_reject_filter                                              "
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ a =   0.            
++ vdd =   0.            
+***   END: Saved Operating Point ***                     

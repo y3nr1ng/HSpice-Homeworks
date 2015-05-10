@@ -1,0 +1,186 @@
+ Init: read install configuration file: C:\synopsys\Hspice2003.09-SP1\meta.cfg
+ ******  HSP_MT -- U-2003.09-SP1 (20031115) 20:50:58  07/01/2009  pcnt         
+  Copyright (C) 2003 Synopsys, Inc. All Rights Reserved.                       
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the 
+  terms and conditions of the license agreement found in:
+    C:\synopsys\Hspice2003.09-SP1\license.txt
+  Use of this program is your acceptance to be bound by this 
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: d:\hspice simulation\homework 9\hw.sp                             
+  lic: MT Count(4) > 2, require one extra license token 
+  lic:  
+  lic: FLEXlm: v6.1g 
+  lic: USER:   Administrator        HOSTNAME: user-ccbe605d75 
+  lic: HOSTID: 080027007457         PID:      1036 
+  lic: Using FLEXlm license file: 
+  lic: C:\synopsys\Hspice2003.09-SP1\license.dat 
+  lic: Checkout hspicewin;  Encryption code: ACFE052FD4EC9BCF5077 
+  lic: Notice: NOT TO BE SOLD 
+  lic: License/Maintenance for hspicewin will expire on 31-dec-2020/2003.3000 
+  lic: NODE LOCKED DEMO license on host 080027007457 
+  lic:   
+ Init: read install configuration file: C:\synopsys\Hspice2003.09-SP1\meta.cfg
+ Init: hspice initialization file: C:\synopsys\Hspice2003.09-SP1\hspice.ini
+ * hspice.ini
+ .option post = 2
+ .global gnd + vdd
+ ** warning **: model esd              does not contain a character period (.), it is not automatic model selector, the parameters lmin, lmax, wmin and wmax are useless and ignored.
+ .op
+ .optionms post
+
+ **error**  unrecognizable command card
+
+ .tran 0.05n 25n
+ v1 vdd 0 5
+ v2 gnd 0 0
+ v3 a 0 pulse(0 5 4n 0 0 4n 8n)
+ v4 b 0 pulse(0 5 2n 0 0 2n 4n)
+ v5 c 0 pulse(0 5 1n 0 0 1n 2n)
+ m1 vdd a d gnd nch w=2u l=1u
+ m2 vdd b d gnd nch w=1u l=1u
+ m3 vdd c d gnd nch w=0.5u l=1u
+ r4 d gnd 1
+ .probe i(r4)
+ .end
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+ **warning** both nodes of source     0:v2              
+             are connected together
+
+
+ *** warning *** pulse rise time is  < or = zero, reset to tstep
+
+
+ *** warning *** pulse fall time is  < or = zero, reset to tstep
+
+
+ *** warning *** pulse rise time is  < or = zero, reset to tstep
+
+
+ *** warning *** pulse fall time is  < or = zero, reset to tstep
+
+
+ *** warning *** pulse rise time is  < or = zero, reset to tstep
+
+
+ *** warning *** pulse fall time is  < or = zero, reset to tstep
+
+ **warning**: circuit size too SMALL to benefit from multithreading, thread count AUTO RESET to 1 
+1 ******  HSP_MT -- U-2003.09-SP1 (20031115) 20:50:58  07/01/2009  pcnt         
+ ******  
+  hw                                                                           
+  ******  operating point information      tnom=  25.000 temp=  25.000         
+ ******  
+ ***** operating point status is all       simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:a       =   0.      0:b       =   0.      0:c       =   0.     
+ +0:d       =  15.7594p 0:vdd     =   5.0000 
+
+
+ ****  voltage sources
+
+ subckt                                              
+ element  0:v1       0:v3       0:v4       0:v5      
+  volts      5.0000     0.         0.         0.     
+  current  -30.8761p    0.         0.         0.     
+  power    154.3803p    0.         0.         0.     
+
+
+     total voltage source power dissipation=  154.3803p       watts
+
+ **** resistors
+
+ subckt             
+ element  0:r4      
+  r value    1.0000 
+  v drop    15.7594p
+  current   15.7594p
+  power    2.484e-22
+
+
+
+ **** mosfets
+
+
+ subckt                                   
+ element  0:m1       0:m2       0:m3      
+ model    0:nch.2    0:nch.5    0:nch.8   
+ region       Cutoff     Cutoff     Cutoff
+  id       323.1887f  229.5874f  206.6633f
+  ibs     -1.205e-23 -1.323e-23 -1.625e-23
+  ibd      -49.9992f  -36.1203f  -30.6160f
+  vgs      -15.7594p  -15.7594p  -15.7594p
+  vds        5.0000     5.0000     5.0000 
+  vbs      -15.7594p  -15.7594p  -15.7594p
+  vth      542.7783m  527.2399m  513.9260m
+  vdsat     41.6402m   41.5040m   42.2575m
+  beta     398.5180u  180.8432u   99.6827u
+  gam eff  461.1648m  450.2921m  407.6344m
+  gm         9.4243p    6.7077p    6.0328p
+  gds      126.0788f   85.7520f   92.5611f
+  gmb        3.3165p    2.3110p    2.0417p
+  cdtot      2.2566f    1.3491f  895.3536a
+  cgtot      3.6995f    2.0596f    1.2347f
+  cstot      3.3454f    1.9787f    1.2954f
+  cbtot      7.5933f    4.5045f    2.9551f
+  cgs      427.0410a  220.7410a  117.5910a
+  cgd      427.0410a  220.7410a  117.5910a
+
+
+
+  Opening plot unit= 79
+ file=d:\hspice simulation\homework 9\hw.tr0                                   
+
+
+          ***** job concluded
+1 ******  HSP_MT -- U-2003.09-SP1 (20031115) 20:50:58  07/01/2009  pcnt         
+ ******  
+  hw                                                                           
+  ******  job statistics summary           tnom=  25.000 temp=  25.000         
+ ******  
+
+           total memory used        469 kbytes
+
+  # nodes =    13 # elements=     9
+  # diodes=     0 # bjts    =     0 # jfets   =     0 # mosfets =     3
+
+     analysis      time      # points  tot. iter  conv.iter
+
+     op point          0.00         1         5
+     transient         0.01       501       904       365 rev=    33
+     readin            0.15
+     errchk            0.02
+     setup             0.00
+     output            0.00
+           total cpu time          0.25 seconds
+               job started at  20:50:58  07/01/2009
+               job ended   at  20:50:58  07/01/2009
+
+
+  lic: Release hspicewin token(s) 

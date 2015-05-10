@@ -1,0 +1,137 @@
+ Init: read install configuration file: C:\synopsys\Hspice2003.09-SP1\meta.cfg
+ ******  HSP_MT -- U-2003.09-SP1 (20031115) 16:19:10  07/14/2009  pcnt         
+  Copyright (C) 2003 Synopsys, Inc. All Rights Reserved.                       
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the 
+  terms and conditions of the license agreement found in:
+    C:\synopsys\Hspice2003.09-SP1\license.txt
+  Use of this program is your acceptance to be bound by this 
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: d:\hspice simulation\mixwave\hw.sp                                
+  lic: MT Count(3) > 2, require one extra license token 
+  lic:  
+  lic: FLEXlm: v6.1g 
+  lic: USER:   Administrator        HOSTNAME: user-ccbe605d75 
+  lic: HOSTID: 080027007457         PID:      3952 
+  lic: Using FLEXlm license file: 
+  lic: C:\synopsys\Hspice2003.09-SP1\license.dat 
+  lic: Checkout hspicewin;  Encryption code: ACFE052FD4EC9BCF5077 
+  lic: Notice: NOT TO BE SOLD 
+  lic: License/Maintenance for hspicewin will expire on 31-dec-2020/2003.3000 
+  lic: NODE LOCKED DEMO license on host 080027007457 
+  lic:   
+ Init: read install configuration file: C:\synopsys\Hspice2003.09-SP1\meta.cfg
+ Init: hspice initialization file: C:\synopsys\Hspice2003.09-SP1\hspice.ini
+ * hspice.ini
+ .option post = 2
+ .global gnd + vdd
+ ** warning **: model esd              does not contain a character period (.), it is not automatic model selector, the parameters lmin, lmax, wmin and wmax are useless and ignored.
+ .op
+ .optionms post
+
+ **error**  unrecognizable command card
+
+ .tran 0.01 10
+ v1 vdd 0 sin(0 10 5 0 0 )
+ v2 gnd 0 0
+ v3 mix 0 sin(0 5 0.5 0 0)
+ r1 vdd a 1
+ r2 mix a 1
+ r3 a gnd 2
+  
+ .probe v(vdd) v(mix) v(a) v(b)
+ .end
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+ **warning** both nodes of source     0:v2              
+             are connected together
+
+ **warning**  attempt to reference undefined node     0:b               
+   branch - output ignored
+
+ **warning**: circuit size too SMALL to benefit from multithreading, thread count AUTO RESET to 1 
+1 ******  HSP_MT -- U-2003.09-SP1 (20031115) 16:19:10  07/14/2009  pcnt         
+ ******  
+  mix_wave                                                                     
+  ******  operating point information      tnom=  25.000 temp=  25.000         
+ ******  
+ ***** operating point status is all       simulation time is     0.     
+    node    =voltage      node    =voltage      node    =voltage
+
+ +0:a       =   0.      0:mix     =   0.      0:vdd     =   0.     
+
+
+ ****  voltage sources
+
+ subckt                        
+ element  0:v1       0:v3      
+  volts      0.         0.     
+  current    0.         0.     
+  power      0.         0.     
+
+
+     total voltage source power dissipation=    0.            watts
+
+ **** resistors
+
+ subckt                                   
+ element  0:r1       0:r2       0:r3      
+  r value    1.0000     1.0000     2.0000 
+  v drop     0.         0.         0.     
+  current    0.         0.         0.     
+  power      0.         0.         0.     
+
+  Opening plot unit= 79
+ file=d:\hspice simulation\mixwave\hw.tr0                                      
+
+
+          ***** job concluded
+1 ******  HSP_MT -- U-2003.09-SP1 (20031115) 16:19:10  07/14/2009  pcnt         
+ ******  
+  mix_wave                                                                     
+  ******  job statistics summary           tnom=  25.000 temp=  25.000         
+ ******  
+
+           total memory used        465 kbytes
+
+  # nodes =     4 # elements=     5
+  # diodes=     0 # bjts    =     0 # jfets   =     0 # mosfets =     0
+
+     analysis      time      # points  tot. iter  conv.iter
+
+     op point          0.00         1         3
+     transient         0.03      1001      1412       706 rev=   101
+     readin            0.16
+     errchk            0.01
+     setup             0.00
+     output            0.00
+           total cpu time          0.20 seconds
+               job started at  16:19:10  07/14/2009
+               job ended   at  16:19:10  07/14/2009
+
+
+  lic: Release hspicewin token(s) 

@@ -1,0 +1,40 @@
+*****  HSP_MT -- U-2003.09-SP1 (20031115) 10:34:05  06/30/2009  pcnt
+ Input File: d:\hspice simulation\homework 5\hw.sp
+ lic: MT Count(4) > 2, require one extra license token
+ lic:
+ lic: FLEXlm: v6.1g
+ lic: USER:   Administrator        HOSTNAME: user-ccbe605d75
+ lic: HOSTID: 080027007457         PID:      3544
+ lic: Using FLEXlm license file:
+ lic: C:\synopsys\Hspice2003.09-SP1\license.dat
+ lic: Checkout hspicewin;  Encryption code: ACFE052FD4EC9BCF5077
+ lic: Notice: NOT TO BE SOLD
+ lic: License/Maintenance for hspicewin will expire on 31-dec-2020/2003.3000
+ lic: NODE LOCKED DEMO license on host 080027007457
+ lic:
+ Init: hspice initialization file: C:\synopsys\Hspice2003.09-SP1\hspice.ini
+ init: begin read circuit files,  cpu clock=  1.90E-01
+ init: end read circuit files,  cpu clock=  2.30E-01 memory=    435 kb
+ init: begin check errors,  cpu clock=  2.30E-01
+ init: end check errors,  cpu clock=  2.60E-01 memory=    455 kb
+ init: begin setup matrix, pivot=    10 cpu clock=  2.60E-01
+       establish matrix -- done,  cpu clock=  2.60E-01 memory=    458 kb
+       re-order matrix -- done,  cpu clock=  2.60E-01 memory=    459 kb
+ init: end setup matrix,  cpu clock=  2.60E-01 memory=    467 kb
+ dcop: begin dcop,  cpu clock=  2.60E-01
+ dcop: end dcop,  cpu clock=  2.60E-01 memory=    467 kb  tot_iter=       7
+ output: d:\hspice simulation\homework 5\hw.tr0
+ sweep: tran tran0    begin, stop_t=  5.00E-04 #sweeps=**** cpu clock=  2.80E-01
+ tran: time= 5.00005E-05 tot_iter=   20004   conv_iter=   10002
+ tran: time= 1.00000E-04 tot_iter=   40004   conv_iter=   20002
+ tran: time= 1.50000E-04 tot_iter=   60004   conv_iter=   30002
+ tran: time= 2.00000E-04 tot_iter=   80004   conv_iter=   40002
+ tran: time= 2.50000E-04 tot_iter=  100004   conv_iter=   50002
+ tran: time= 3.00001E-04 tot_iter=  120004   conv_iter=   60002
+ tran: time= 3.50001E-04 tot_iter=  140004   conv_iter=   70002
+ tran: time= 4.00001E-04 tot_iter=  160004   conv_iter=   80002
+ tran: time= 4.50001E-04 tot_iter=  180004   conv_iter=   90002
+ tran: time= 5.00000E-04 tot_iter=  200004   conv_iter=  100002
+ sweep: tran tran0    end,  cpu clock=  3.22E+00 memory=    468 kb
+>info:         ***** hspice job concluded
+ lic: Release hspicewin token(s)

@@ -1,0 +1,39 @@
+pnlAddPane();
+nil
+1
+designOpen("d:\\hspice simulation\\homework 1\\hw.sp");
+"D0"
+t
+pnlAddCurve(1, node(D0,"A0","v(vdd)"), node(D0,"A0","TIME"));
+nil
+pnlAddCurve(1, node(D0,"A0","v(a)"), node(D0,"A0","TIME"));
+nil
+pnlAddCurve(1, node(D0,"A0","v(c)"), node(D0,"A0","TIME"));
+nil
+pnlAddCurve(1, node(D0,"A0","v(e)"), node(D0,"A0","TIME"));
+nil
+pnlAddPane();
+nil
+nil
+2
+pnlUnselectPane(2, 0);
+nil
+pnlSelectPane(1);
+nil
+pnlUnselectPane(1, 0);
+nil
+pnlSelectPane(2);
+nil
+pnlAddCurve(2, node(D0,"A0","i(r2)"), node(D0,"A0","TIME"));
+nil
+pnlAddCurve(2, node(D0,"A0","i(r3)"), node(D0,"A0","TIME"));
+nil
+quit();
+exit
+pnlDeletePane(2, 1);
+nil
+nil
+nil
+pnlDeletePane(1, 1);
+nil
+nil

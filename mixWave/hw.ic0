@@ -1,0 +1,16 @@
+* "simulator" "HSPICE" 
+* "version" "U-2003.09-SP1   "
+* "format" "HSP"
+* "rundate" "16:19:10  07/14/2009"
+* "netlist" "d:\hspice simulation\mixwave\hw.sp "
+* "runtitle" " mix_wave                                                        "
+* time =    0.            
+* temperature =   25.0000        
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc=   1.0000p       
+.nodeset
++ a =   0.            
++ mix =   0.            
++ vdd =   0.            
+***   END: Saved Operating Point ***                     
